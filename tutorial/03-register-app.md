@@ -1,63 +1,59 @@
 ---
-ms.openlocfilehash: 9a320225c7e7e76506d73909a311fa019b1f74f3
-ms.sourcegitcommit: e0d9b18d2d4cbeb4a48890f3420a47e6a90abc53
+ms.openlocfilehash: 883eff2860fe2555cdd816cb942a4a87918a5836
+ms.sourcegitcommit: 59d94851101b121dc89c0f6ccf3b923e35d8efe8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "49347723"
+ms.lasthandoff: 07/15/2021
+ms.locfileid: "53446824"
 ---
 <!-- markdownlint-disable MD002 MD041 -->
 
-Neste exercício, você criará um novo registro de canais de bot e um registro de aplicativo Web do Azure AD usando o portal do Azure.
+Neste exercício, você criará um novo registro de Canais bot e um registro de aplicativo Web do Azure AD usando o Portal do Azure.
 
-## <a name="create-a-bot-channels-registration"></a>Criar um registro de canais de bot
+## <a name="create-a-bot-channels-registration"></a>Criar um registro de Canais de Bot
 
-1. Abra um navegador e navegue até o [portal do Azure](https://portal.azure.com). Faça logon usando a conta associada à sua assinatura do Azure.
+1. Abra um navegador e navegue até o [Portal do Azure.](https://portal.azure.com) Faça logon usando a conta associada à sua assinatura do Azure.
 
-1. Selecione o menu superior esquerdo e, em seguida, selecione **criar um recurso**.
+1. Selecione o menu superior esquerdo e selecione **Criar um recurso**.
 
-    ![Uma captura de tela do menu do portal do Azure](images/create-resource.png)
+    ![Uma captura de tela do menu do Portal do Azure](images/create-resource.png)
 
-1. Na **nova** página, procure `Bot Channel` e selecione o **registro de canais de bot**.
+1. Na página **Novo,** pesquise `Azure Bot` e selecione Bot do **Azure.**
 
-1. Na página **registro de canais de bot** , selecione **criar**.
+1. Na página **Bot do Azure,** selecione **Criar**.
 
-1. Preencha os campos obrigatórios e deixe **ponto de extremidade de mensagem** em branco. O campo **identificador de bot** deve ser exclusivo. Certifique-se de revisar as diferentes camadas de preços e selecionar o que faz sentido para o seu cenário. Se este é apenas um exercício de aprendizagem, talvez você queira selecionar a opção gratuito.
+1. Preencha os campos necessários e deixe o ponto de extremidade **mensagens em** branco. O **campo de alça bot** deve ser exclusivo. Revise as diferentes camadas de preços e selecione o que faz sentido para seu cenário. Se isso for apenas um exercício de aprendizagem, talvez você queira selecionar a opção gratuita.
 
-1. Selecione a **ID e a senha do aplicativo Microsoft e**, em seguida, selecione **criar novo**.
+1. Para **a ID do Aplicativo** Microsoft, selecione Criar nova **ID do Microsoft App.**
 
-1. Selecione **criar ID de aplicativo no portal de registro de aplicativo**. Isso abrirá uma nova janela ou guia na folha de **registros de aplicativos** no portal do Azure.
+1. Selecione **Examinar + criar**. Depois que a validação é concluída, selecione **Criar**.
 
-1. Na folha **registros de aplicativos** , selecione **novo registro**.
+1. Depois que a implantação for concluída, selecione **Ir para o recurso**.
 
-1. Defina os valores da seguinte maneira.
+1. Em **Configurações**, selecione **Configuração**. Selecione o link **Gerenciar** ao lado da **ID do Microsoft App.**
 
-    - Defina **Nome** para `Graph Calendar Bot`.
-    - Defina **Tipos de conta com suporte** para **Contas em qualquer diretório organizacional e contas pessoais da Microsoft**.
-    - Deixe o **URI de Redirecionamento** vazio.
+1. Selecione **Novo segredo do cliente**. Adicione uma descrição e escolha uma expiração e selecione **Adicionar**.
 
-    ![Uma captura de tela da página registrar um aplicativo](./images/aad-register-an-app.png)
-
-1. Selecione **Registrar**. Na página **bot Calendar do gráfico** , copie o valor da **ID do aplicativo (cliente)** e salve-o, você precisará deles nas etapas a seguir.
-
-    ![Uma captura de tela da ID do aplicativo do novo registro de aplicativo](./images/aad-application-id.png)
-
-1. Selecione **Certificados e segredos** sob **Gerenciar**. Selecione o botão **Novo segredo do cliente**. Insira um valor em **Descrição** e selecione uma das opções para **expirar** e selecione **Adicionar**.
-
-1. Copie o valor secreto do cliente antes de sair desta página. Você precisará dela nas etapas a seguir.
+1. Copie o valor de segredo do cliente antes de sair desta página. Você precisará dele nas etapas a seguir.
 
     > [!IMPORTANT]
-    > Este segredo do cliente nunca é mostrado novamente, portanto, copie-o agora. Você precisará inserir esse valor em vários lugares para mantê-lo seguro.
+    > Esse segredo do cliente nunca é mostrado novamente, portanto, copie-o agora. Você precisará inserir esse valor em vários locais, portanto, mantenha-o seguro.
 
-1. Retorne à janela de registro do canal de bot no navegador e cole a ID do aplicativo no campo **ID do aplicativo da Microsoft** . Cole o segredo do cliente no campo **senha** . Selecione **OK**.
+1. Selecione **Visão** geral no menu à esquerda. Copie o valor da **ID do aplicativo (cliente)** e salve-o, você precisará dele nas etapas a seguir.
 
-1. Na página **registro de canais de bots** , selecione **criar**.
+    ![Captura de tela da ID do aplicativo do novo registro do aplicativo](./images/aad-application-id.png)
 
-1. Aguarde até que o registro de canais de bot seja criado. Depois de criado, retorne à Home Page no portal do Azure e selecione **serviços de bot**. Selecione seu novo registro de canal de bots para exibir suas propriedades.
+1. Retorne à janela Registro de Canal bot no navegador e colar a ID do aplicativo no campo **ID do Aplicativo** microsoft. Colar o segredo do cliente no campo **Senha.** Clique em **OK**.
+
+1. Na página **Registro de Canais de Bots,** selecione **Criar**.
+
+1. Aguarde até que o registro de Canais bots seja criado. Depois de criado, retorne à home page no Portal do Azure e selecione **Serviços bot.** Selecione seu novo registro do Canal bots para exibir suas propriedades.
 
 ## <a name="create-a-web-app-registration"></a>Criar um registro de aplicativo Web
 
-1. Retorne à seção **registros de aplicativos** do portal do Azure.
+1. Volte para a home page do portal do Azure e selecione **Azure Active Directory**.
+
+1. Selecione **Registros de aplicativo .**
 
 1. Selecione **Novo registro**. Na página **Registrar um aplicativo**, defina os valores da seguinte forma.
 
@@ -65,57 +61,57 @@ Neste exercício, você criará um novo registro de canais de bot e um registro 
     - Defina **Tipos de conta com suporte** para **Contas em qualquer diretório organizacional e contas pessoais da Microsoft**.
     - Em **URI de Redirecionamento**, defina o primeiro menu suspenso para `Web` e defina o valor como `https://token.botframework.com/.auth/web/redirect`.
 
-1. Selecione **Registrar**. Na página **autenticação de bot de calendário do gráfico** , copie o valor da **ID do aplicativo (cliente)** e salve-o, você precisará deles nas etapas a seguir.
+1. Selecione **Registrar**. Na página **Graph Calendário Bot Auth,** copie o valor da ID do Aplicativo **(cliente)** e salve-a, você precisará dele nas etapas a seguir.
 
-1. Selecione **Certificados e segredos** sob **Gerenciar**. Selecione o botão **Novo segredo do cliente**. Insira um valor em **Descrição** e selecione uma das opções para **expirar** e selecione **Adicionar**.
+1. Selecione **Certificados e segredos** sob **Gerenciar**. Selecione o botão **Novo segredo do cliente**. Insira um valor em **Descrição** e selecione uma das opções para **Expira** em e selecione **Adicionar**.
 
-1. Copie o valor secreto do cliente antes de sair desta página. Você precisará dela nas etapas a seguir.
+1. Copie o valor de segredo do cliente antes de sair desta página. Você precisará dele nas etapas a seguir.
 
-1. Selecione **permissões de API** e, em seguida, selecione **Adicionar uma permissão**.
+1. Selecione **permissões de API** e, em seguida, selecione Adicionar uma **permissão**.
 
-1. Selecione **Microsoft Graph** e, em seguida, selecione **permissões delegadas**.
+1. Selecione **Microsoft Graph**, em seguida, selecione Permissões **delegadas**.
 
-1. Selecione as permissões a seguir e, em seguida, selecione **adicionar permissões**.
+1. Selecione as seguintes permissões e selecione **Adicionar permissões**.
 
     - **openid**
-    - **perfil**
+    - **profile**
     - **Calendars.ReadWrite**
     - **MailboxSettings.Read**
 
-    ![Captura de tela das permissões configuradas](images/configured-permissions.png)
+    ![Uma captura de tela de permissões configuradas](images/configured-permissions.png)
 
 ### <a name="about-permissions"></a>Sobre permissões
 
-Considere o que cada um desses escopos de permissão permite que o bot faça e o que o bot utilizará para eles.
+Considere para que cada um desses escopos de permissão permite que o bot faça e para que o bot os usará.
 
-- **OpenID** e **Profile**: permite ao bot assinar usuários e obter informações básicas do Azure AD no token de identidade.
-- **Calendars. ReadWrite**: permite que o bot Leia o calendário do usuário e adicione novos eventos ao calendário do usuário.
-- **MailboxSettings. Read**: permite que o bot Leia as configurações da caixa de correio do usuário. O bot usará isso para obter o fuso horário selecionado do usuário.
-- **User. Read**: permite ao bot obter o perfil do usuário do Microsoft Graph. O bot usará isso para obter o nome do usuário.
+- **openid** e **perfil**: permite que o bot entre usuários e receba informações básicas do Azure AD no token de identidade.
+- **Calendars.ReadWrite**: permite que o bot leia o calendário do usuário e adicione novos eventos ao calendário do usuário.
+- **MailboxSettings.Read**: permite que o bot leia as configurações de caixa de correio do usuário. O bot usará isso para obter o fuso horário selecionado pelo usuário.
+- **User.Read**: permite que o bot receba o perfil do usuário do Microsoft Graph. O bot usará isso para obter o nome do usuário.
 
 ## <a name="add-oauth-connection-to-the-bot"></a>Adicionar conexão OAuth ao bot
 
-1. Navegue até a página de registro dos canais de bot do bot no portal do Azure. Selecione **configurações** em **Gerenciamento de bot**.
+1. Navegue até a página bot do seu bot no Portal do Azure. Selecione **Configuração** em **Configurações**.
 
-1. Em **configurações de conexão OAuth** próximo à parte inferior da página, selecione **Adicionar configuração**.
+1. Selecione **Adicionar conexão OAuth Configurações**.
 
-1. Preencha o formulário da seguinte maneira e selecione **salvar**.
+1. Preencha o formulário da seguinte maneira e selecione **Salvar**.
 
     - **Nome**: `GraphBotAuth`
     - **Provedor**: **Azure Active Directory v2**
-    - **ID do cliente**: a ID do aplicativo do seu registro de **autenticação do bot de calendário do gráfico** .
-    - **Segredo do cliente**: o segredo do cliente do registro de **autenticação do bot de calendário do gráfico** .
-    - **URL do token do Exchange**: deixar em branco
+    - **ID do cliente**: A ID do aplicativo do seu **registro Graph Calendar Bot Auth.**
+    - **Segredo do** cliente : o segredo do cliente do seu **registro Graph Calendar Bot Auth.**
+    - **URL do token Exchange**: Deixar em branco
     - **ID do locatário**: `common`
     - **Escopos**: `openid profile Calendars.ReadWrite MailboxSettings.Read User.Read`
 
-1. Selecione a entrada **GraphBotAuth** em **configurações de conexão OAuth**.
+1. Selecione a entrada **GraphBotAuth** em **OAuth Connection Configurações**.
 
-1. Selecione **testar conexão**. Isso abre uma nova janela ou guia do navegador para iniciar o fluxo do OAuth.
+1. Selecione **Conexão de Teste**. Isso abre uma nova janela ou guia do navegador para iniciar o fluxo OAuth.
 
-1. Se necessário, entre. Revise a lista de permissões solicitadas e selecione **aceitar**.
+1. Se necessário, entre. Revise a lista de permissões solicitadas e selecione **Aceitar**.
 
-1. Você verá uma mensagem de **teste de conexão com êxito em ' GraphBotAuth '** .
+1. Você deve ver uma **mensagem conexão de teste com 'GraphBotAuth' Bem-sucedida.**
 
 > [!TIP]
-> Você pode selecionar o botão **copiar token** nesta página e colar o token em [https://jwt.ms](https://jwt.ms) para ver as declarações dentro do token. Isso é útil na solução de problemas de erros de autenticação.
+> Você pode selecionar o botão **Copiar Token** nesta página e colar o token para ver as declarações dentro [https://jwt.ms](https://jwt.ms) do token. Isso é útil ao solucionar problemas de erros de autenticação.
